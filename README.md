@@ -1,6 +1,6 @@
 # PhotoRamka
 
-PhotoRamka is a web ышеу for sharing and managing animal photos. This project is built using Django and Bootstrap.
+PhotoRamka is a web site for sharing and managing animal photos. This project is built using Django and Bootstrap.
 
 ## Features
 
