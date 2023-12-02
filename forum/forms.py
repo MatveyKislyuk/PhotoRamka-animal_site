@@ -1,4 +1,3 @@
-# forum/forms.py
 from django import forms
 from .models import Image, Tag
 
@@ -13,7 +12,6 @@ class ImageForm(forms.ModelForm):
     def save(self, commit=True):
         image = super(ImageForm, self).save(commit=False)
 
-        # Сохраняем изображение, чтобы получить идентификатор (id)
         if commit:
             image.save()
 
