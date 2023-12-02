@@ -1,4 +1,3 @@
-# forum/views.py
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Image, Tag
 from .forms import ImageForm, TagForm, AddTagForm
@@ -83,13 +82,10 @@ def delete_tag(request):
             try:
                 tag = Tag.objects.get(name=tag_to_delete)
                 tag.delete()
-                # Успешное удаление
-                return redirect('delete_tag')  # Перенаправление на страницу после удаления
+                return redirect('delete_tag')
             except Tag.DoesNotExist:
-                # Тег не найден
                 pass
 
-    # Получение списка всех тегов
     all_tags = Tag.objects.all()
 
     context = {'all_tags': all_tags}
